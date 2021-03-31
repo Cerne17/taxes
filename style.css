@@ -1,0 +1,96 @@
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2vmax 30vmax;
+    font-family: arial;
+    font-size: 40px;
+    border: 2px solid #000;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.simples {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
+    text-align: center;
+    width: 45vmax;
+    padding: 20px;
+    border: 2px solid black;
+    margin-right: auto;
+}
+.compostos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: right;
+    text-align: center;
+    width: 45vmax;
+    padding: 20px;
+    border: 2px solid black;
+    margin-left: auto;
+}
+h2 {
+    font-family: arial;
+    font-size: 30px;
+
+}
+.box {
+    height: 50px;
+}
+#button {
+    height: 60px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vmax;
+    font-size: 20px;
+    background: #dadada;
+}
+#button:hover {
+    background-color: #525252;
+    color: white;
+    cursor: pointer;
+}
+.texts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2vmax 37vmax;
+    font-family: arial;
+    font-size: 30px;
+    border: 2px solid #000;
+    background: #dadada;
+}
+#secondContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border:1px solid black; 
+    background: #dadada;
+    justify-content: center; 
+}
+.jurosSimples, .jurosCompostos {
+    width: 95%;
+    background: white;
+    margin: 20px;
+    padding: 5px;
+    border: 2px solid #000;
+}
+#montanteSimples, #jurosSimples, #montanteComposto, #jurosCompostos {
+    font-family: arial;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+a {
+    font-weight: bold;
+    font-family: arial;
+    font-size: 20px;
+    color: #a51f1f;
+}
