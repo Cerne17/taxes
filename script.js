@@ -2,20 +2,21 @@ function main() {
 
     document.getElementById('secondContainer').removeAttribute("style");
 
-    var capitalSimples = document.getElementById('capitalSimples').value;
-    var taxaSimples = document.getElementById('taxaSimples').value;
-    var parcelasSimples = document.getElementById('parcelasSimples').value;
+    var capitalSimples = parseFloat(document.getElementById('capitalSimples').value);
+    var taxaSimples = parseFloat(document.getElementById('taxaSimples').value);
+    var parcelasSimples = parseFloat(document.getElementById('parcelasSimples').value);
 
-    var capitalComposto = document.getElementById('capitalComposto').value;
-    var taxaComposta = document.getElementById('taxaComposta').value;
-    var parcelasCompostas = document.getElementById('parcelasCompostas').value;
-    // console.log(capitalSimples, taxaSimples, parcelasSimples, capitalComposto, taxaComposta, parcelasCompostas)
+    var capitalComposto = parseFloat(document.getElementById('capitalComposto').value);
+    var taxaComposta = parseFloat(document.getElementById('taxaComposta').value);
+    var parcelasCompostas = parseFloat(document.getElementById('parcelasCompostas').value);
 
-    var montanteSimples = (capitalSimples * taxaSimples * parcelasSimples) + capitalSimples;
     var jurosSimples = capitalSimples * taxaSimples * parcelasSimples;
+    var montanteSimples = jurosSimples + capitalSimples;
 
-    var montanteComposto = capitalComposto * Math.pow((1 + taxaComposta), parcelasCompostas);
-    var jurosCompostos = capitalComposto * Math.pow((1 + taxaComposta), parcelasCompostas) - capitalComposto;
+    const tax = 1 + taxaComposta;
+
+    var jurosCompostos = capitalComposto * Math.pow(tax, parcelasCompostas) - capitalComposto;
+    var montanteComposto = capitalComposto * Math.pow(tax, parcelasCompostas);
 
     montanteSimples = parseFloat(montanteSimples).toFixed(2);
     jurosSimples = parseFloat(jurosSimples).toFixed(2);
